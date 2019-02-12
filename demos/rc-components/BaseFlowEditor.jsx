@@ -9,6 +9,7 @@ import ToolBar from './Toolbar.jsx';
 import Contextmenu from './Contextmenu.jsx';
 import Itempanel from './Itempanel.jsx';
 import Detailpanel from './Detailpanel.jsx';
+import EdgeDetail  from './edgeDetail.jsx';
 import Editor from './Editor.jsx';
 import Page from './Page.jsx';
 import { Checkbox, Input, InputNumber } from 'antd';
@@ -62,6 +63,7 @@ export default class BaseFlowEditor extends Editor {
             this.updateGraph('color', ev.color);
           }}/>
       </div>);
+    
     return <div className="editor">
       <ToolBar editor={this.editor} />
       <div style={{ height: '42px' }}></div>
@@ -114,6 +116,9 @@ export default class BaseFlowEditor extends Editor {
               <div className="panel-title">边</div>
               <div className="block-container">
                 {labelInput}
+              </div>
+              <div className="block-container">
+                  <EdgeDetail />
               </div>
             </div>
             <div data-status="group-selected" className="panel" id="group_detailpanel">

@@ -2,6 +2,7 @@ import React from 'react';
 import G6Editor from '../../src/';
 import PropTypes from 'prop-types';
 import './toolbar.css';
+import './font.css'
 class Toolbar extends React.Component {
   createToolbar(container) {
     return new G6Editor.Toolbar({
@@ -20,7 +21,6 @@ class Toolbar extends React.Component {
   }
   render() {
     return (<div className="toolbar" ref={el => { this.toolbarContainer = el; }}>
-      <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_598462_3xve1872wizzolxr.css" />
       <i data-command="undo" className="command iconfont icon-undo" title="撤销"></i>
       <i data-command="redo" className="command iconfont icon-redo" title="重做"></i>
       <span className="separator"></span>
